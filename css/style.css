@@ -1,0 +1,689 @@
+/* Убираем горизонтальный скроллбар */
+body {
+  overflow-x: hidden;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Устанавливаем стили для хедера */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Уменьшаем высоту хедера при ширине экрана 1520px */
+@media screen and (max-width: 1520px) {
+  header {
+    height: 80px;
+    padding: 10px;
+  }
+}
+
+/* Скрываем полоску hr при ширине экрана 1520px */
+@media screen and (max-width: 1520px) {
+  hr {
+    display: none;
+  }
+}
+
+/* Устанавливаем стили для навигации */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Скрываем меню навигации при ширине экрана 960px */
+@media screen and (max-width: 980px) {
+  nav ul {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* Устанавливаем стили для бургер-меню */
+.menu-icon {
+  display: none;
+}
+
+/* Устанавливаем стили для основного контента */
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Скрываем элементы moviecard при ширине экрана 350px */
+@media screen and (max-width: 350px) {
+  .content {
+    display: none;
+  }
+}
+
+
+
+/* Общие стили */
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+hr {
+  border: none;
+  border-top: 1px solid white;
+}
+
+/* Шапка сайта */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(rgba(167, 167, 167, 0.6), rgba(141, 141, 141, 0.6)), url(../img/headback.svg);
+  background-size: cover;
+  background-position: center;
+  background-color: #272626;
+  
+  padding: 10px;
+}
+.small {
+  margin-left: 5px;
+  color: rgb(155, 152, 152);
+}
+
+.header-right {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+  margin-left: 0%;
+  margin-right: 0%;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.primary-navigation ul {
+  position: relative;
+  margin: 0% 0% 15% 0%;
+}
+
+.header .primary-navigation {
+  font-size: 1.45em; 
+}
+
+.header .primary-navigation li {
+  height: 60px; 
+  line-height: 60px;
+}
+
+.header .primary-navigation a {
+  padding: 0 20px; 
+}
+
+
+.header-right a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.4s;
+  margin-left: 20px;
+}
+
+.header-right a:first-child {
+  margin-left: 0;
+}
+
+
+/* бургер-меню */
+
+*, *:before, *:after 
+{ box-sizing: border-box; }
+
+html { font-size: 18px; }
+
+.burger {
+  color: #ad2543;
+  font-size: 2em;
+  line-height: 1.6;
+  background: #ad2543;
+  overflow-x: hidden;
+}
+
+label .menu {
+  position: absolute;
+  right: -100px;
+  top: -100px;
+  z-index: 100;
+  width: 200px;
+  height: 200px;
+  background: #FFF;
+  border-radius: 50% 50% 50% 50%;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+  cursor: pointer;
+  
+}
+
+label .hamburger {
+  position: absolute;
+  top: 135px;
+  left: 50px;
+  width: 30px;
+  height: 2px;
+  background: #ad2543;
+  display: block;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+label .hamburger:after, label .hamburger:before {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #ad2543;
+}
+
+label .hamburger:before { top: -10px; }
+
+label .hamburger:after { bottom: -10px; }
+
+label input { display: none; }
+
+label input:checked + .menu {
+  box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
+  border-radius: 0;
+  
+}
+
+label input:checked + .menu .hamburger {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  
+}
+
+label input:checked + .menu .hamburger:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  bottom: 0;
+  
+}
+
+label input:checked + .menu .hamburger:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 0;
+  
+}
+
+label input:checked + .menu + ul { opacity: 1; }
+
+label ul {
+  z-index: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: .4s 0s ease-in-out;
+  transition: .4s 0s ease-in-out;
+}
+
+label a {
+  margin-bottom: 1em;
+  display: block;
+  color: #a59b9d;
+  text-decoration: none;
+  
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+}
+
+@media screen and (min-width: 980px) {
+  .burger {
+    display: none;
+  }
+}
+
+/* Основной контент */
+.content {
+  background-image: linear-gradient(rgba(167, 167, 167, 0.6), rgba(95, 94, 94, 0.6)), url(../img/1626291669_9-kartinkin-com-p-serii-fon-geometriya-krasivo-10.svg);
+  background-color: #696868;
+  padding: 20px;
+  z-index: 3;
+}
+
+.content h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.content h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.content p {
+  font-size: 18px;
+}
+
+/* Карточки фильмов */
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  justify-content: space-between;
+}
+
+.movie {
+  flex: 1;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 0;
+  margin-right: 20px;
+}
+
+.movie:last-child {
+  margin-right: 0;
+}
+
+.movie {
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.movie img {
+  display: block;
+  border-radius: 10px;
+}
+
+/*.movie small {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  color: gray;
+}*/
+
+.movie-title h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 10px;
+  height: 50px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.movie p {
+  font-size: 14px;
+  margin: 10px;
+  height: 70px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.movie-rating {
+  margin: 10px;
+}
+
+.buy-button {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: 2px solid #ad2543;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: transparent;
+  color: #ad2543;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.buy-button:hover {
+  color: white;
+  background-color: #ad2543;
+}
+
+/* Блок развлечений */
+
+.entertainment {
+  background-image: url('../img/WhatsApp_Image_2022-.png');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+.entertainment-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20%;
+  border-radius: 10px;
+}
+
+
+
+.entertainment-text {
+  width: 40%;
+  color: #fff;
+  word-wrap: break-word;
+}
+
+.entertainment h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.entertainment p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.entertainment-image {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.more-button {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  border: 2px solid #ad2543;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: transparent;
+  color: #ad2543;
+  text-align: center;
+  line-height: 46px;
+  text-decoration: none;
+}
+
+.more-button:hover {
+  color: white;
+  background-color: #ad2543;
+}
+
+.promotion-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20%;
+  border-radius: 10px;
+}
+
+.promotion-text {
+  width: 40%;
+  color: #fff;
+  word-wrap: break-word;
+}
+
+.promotion h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.promotion p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.promotion-image {
+  width: 40%;
+  border-radius: 10px;
+}
+
+/* Медиа-запрос для экранов с шириной до 1020px */
+@media (max-width: 1020px) {
+  .entertainment-image {
+    width: 0%;
+    display: none;
+  }
+
+  .entertainment-text {
+    width: 100%;
+  }
+
+  .entertainment-content {
+    justify-content: center;
+    padding: 2px 0%;
+    display: flex;
+  }
+
+  .entertainment-image {
+    display: none;
+  }
+
+  .more-button {
+    font-size: 14px;
+    height: 40px;
+    line-height: 36px;
+  }
+
+  .entertainment-image {
+    width: 0%;
+    display: none;
+  }
+
+  .promotion-text {
+    width: 100%;
+  }
+
+  .promotion-content {
+    justify-content: center;
+    padding: 2px 0%;
+    display: flex;
+  }
+
+  .promotion-image {
+    width: 0%;
+    display: none;
+  }
+
+}
+
+
+
+/* Дополнительные стили */
+.entertainment-text {
+  max-width: 45%;
+  color: #fff;
+  word-wrap: break-word;
+}
+
+
+
+.entertainment-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.entertainment-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.promotion {
+  background-image: url('../img/oryg4208910.jpg'); 
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+
+
+.promotion h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+
+
+.promotion-image {
+  width: 40%;
+  border-radius: 10px;
+}
+.promotion-text {
+  max-width: 45%;
+  color: #fff;
+  word-wrap: break-word;
+}
+
+.promotion-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.promotion-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Футер */
+.footer-bs {
+  background-color: #2e3347;
+	padding: 60px 40px;
+	color: rgba(255,255,255,1.00);
+	border-bottom-right-radius: 6px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 6px;
+  width: 100%;
+  max-width: none;
+  margin: auto;
+}
+.footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
+.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
+.footer-bs .footer-brand h2 { margin:0px 0px 10px; }
+.footer-bs .footer-brand p { font-size:12px; color:rgba(255,255,255,0.70); }
+
+.footer-bs .footer-nav ul.pages { list-style:none; padding:0px; }
+.footer-bs .footer-nav ul.pages li { padding:5px 0px;}
+.footer-bs .footer-nav ul.pages a { color:rgba(255,255,255,1.00); font-weight:bold; text-transform:uppercase; }
+.footer-bs .footer-nav ul.pages a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
+.footer-bs .footer-nav h4 {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom:10px;
+}
+
+.footer-bs .footer-nav ul.list { list-style:none; padding:0px; }
+.footer-bs .footer-nav ul.list li { padding:5px 0px;}
+.footer-bs .footer-nav ul.list a { color:rgba(255,255,255,0.80); }
+.footer-bs .footer-nav ul.list a:hover { color:rgba(255,255,255,0.60); text-decoration:none; }
+
+.footer-bs .footer-social ul { list-style:none; padding:0px; }
+.footer-bs .footer-social h4 {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+.footer-bs .footer-social li { padding:5px 4px;}
+.footer-bs .footer-social a { color:rgba(255,255,255,1.00);}
+.footer-bs .footer-social a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
+
+.footer-bs .footer-ns h4 {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom:10px;
+}
+.footer-bs .footer-ns p { font-size:12px; color:rgba(255,255,255,0.70); }
+
+@media (min-width: 768px) {
+	.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
+}
+
+.copyright {
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-left: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.copyright,
+.social-icons {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* Иконки */
+.icon {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+.icon-facebook:before {
+  content: '\f09a';
+}
+
+.icon-twitter:before {
+  content: '\f099';
+}
+
+.icon-instagram:before {
+  content: '\f16d';
+}
+
+.icon-linkedin:before {
+  content: '\f08c';
+}
+
+

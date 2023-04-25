@@ -1,0 +1,28 @@
+const xmlString = `<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<div class="entertainment">
+    <div class="entertainment-content">
+      <div class="entertainment-text">
+        <h2>Развлечения</h2>
+        <br>
+        <p>Смотрите концерты, пойте в караоке, отмечайте семейные праздники или играйте в видеоигры на большом экране</p>
+        <br>
+        <button class="more-button">Подробнее</button>
+      </div>
+      <img class="entertainment-image" src="img/PIEDMONT-TV-AREA-F-RGB.svg" alt="Entertainment">
+    </div>
+  </div>
+  <div class="promotion">
+    <div class="promotion-content">
+      <img class="promotion-image" src="img/db91eb2a57bf57a5a97be78b4b529108.jpg" alt="Visa Promotion">
+      <div class="promotion-text">
+        <small class="small">Акция</small>
+        <h2>Мир привилегий VISA</h2>
+        <br>
+        <p>При оплате билетов в кинотеатрах Delta Cinema платежными карточками Visa вы получаете скидку!</p>
+        <br>
+        <button class="more-button">Подробнее</button>
+      </div>
+    </div>
+  </div>
+</html>`;

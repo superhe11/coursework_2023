@@ -1,0 +1,261 @@
+nav.primary-navigation {
+  margin: 0 auto;
+  display: block;
+  padding: 120px 0 0 0;
+  text-align: center;
+  font-size: 16px;
+}
+nav.primary-navigation ul li {
+  list-style: none;
+  margin: 0 auto;
+  border-left: 2px solid #ad2543;
+  display: inline-block;
+  padding: 0 30px;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+
+}
+nav.primary-navigation li a {
+  color: black;
+}
+nav.primary-navigation li a:hover {
+  color: #3ca0e7;
+}
+nav.primary-navigation li:hover {
+  cursor: pointer;
+}
+nav.primary-navigation ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  padding-left: 0;
+  left: 0;
+  display: none;
+  background: white;
+}
+nav.primary-navigation ul li:hover > ul,
+nav.primary-navigation ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  min-width: 250px;
+  text-align: left;
+  padding-top: 20px;
+  box-shadow: 0px 3px 5px -1px #ccc;
+}
+nav.primary-navigation ul li ul li {
+  clear: both;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+  border-style: none;
+}
+nav.primary-navigation ul li ul li a:hover {
+  padding-left: 10px;
+  border-left: 2px solid #b12631;
+  transition: all 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #3CA0E7;
+}
+
+ul li ul li a {
+  transition: all 0.5s ease;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(rgba(167, 167, 167, 0.6), rgba(141, 141, 141, 0.6)), url(../img/headback.svg);
+  background-size: cover;
+  background-position: center;
+  background-color: #272626;
+  
+  padding: 10px;
+}
+.header-right {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+  margin-left: 0%;
+  margin-right: 0%;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.primary-navigation ul {
+  position: relative;
+  margin: 0% 0% 15% 0%;
+}
+
+.header .primary-navigation {
+  font-size: 1.45em; 
+}
+
+.header .primary-navigation li {
+  height: 60px; 
+  line-height: 60px;
+}
+
+.header .primary-navigation a {
+  padding: 0 20px; 
+}
+
+
+.header-right a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.4s;
+  margin-left: 20px;
+}
+
+.header-right a:first-child {
+  margin-left: 0;
+}
+
+.header-right hr {
+  width: 140%;
+  position: absolute;
+  margin: 0% 0% 0% 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  border: none;
+  height: 1px;
+  background-color: rgb(56,56,56);
+}
+
+/* Убираем горизонтальный скроллбар */
+body {
+  overflow-x: hidden;
+}
+
+/* Устанавливаем стили для хедера */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+
+
+/* Уменьшаем высоту хедера при ширине экрана 1520px */
+@media screen and (max-width: 1520px) {
+  header {
+    height: 80px;
+    padding: 10px;
+  }
+}
+
+/* Скрываем полоску hr при ширине экрана 1520px */
+@media screen and (max-width: 1520px) {
+  hr {
+    display: none;
+  }
+}
+
+/* Устанавливаем стили для навигации */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Скрываем меню навигации при ширине экрана 960px */
+@media screen and (max-width: 960px) {
+  nav ul {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* Устанавливаем стили для бургер-меню */
+.menu-icon {
+  display: none;
+}
+
+/* Устанавливаем стили для основного контента */
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Скрываем элементы moviecard при ширине экрана 350px */
+@media screen and (max-width: 350px) {
+  .moviecard {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1340px) {
+  .header img {
+    width: 270px;
+    height: 238px;
+  }
+
+  .header .primary-navigation {
+    font-size: 1.3em;
+  }
+
+  .header .primary-navigation li {
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .header .primary-navigation a {
+    padding: 0 15px;
+  }
+}
+
+/* Уменьшаем размер логотипа и меню при ширине экрана 1140px */
+@media screen and (max-width: 1205px) {
+  .header img {
+    width: 250px;
+    height: 208px;
+  }
+
+  .header .primary-navigation {
+    font-size: 1.1em;
+  }
+
+  .header .primary-navigation li {
+    height: 45px;
+    line-height: 45px;
+  }
+
+  .header .primary-navigation a {
+    padding: 0 15px;
+  }
+}
+
+/* Уменьшаем размер логотипа и меню при ширине экрана 960px */
+@media screen and (max-width: 1110px) {
+  .header img {
+    width: 200px;
+    height: 167px;
+  }
+
+  .header .primary-navigation {
+    font-size: 1em;
+  }
+
+  .header .primary-navigation li {
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .header .primary-navigation a {
+    padding: 0 10px;
+  }
+}
