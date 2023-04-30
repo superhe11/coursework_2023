@@ -1,28 +1,59 @@
-const xmlString = `<?xml version="1.0" encoding="UTF-8"?>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<div class="entertainment">
-    <div class="entertainment-content">
-      <div class="entertainment-text">
-        <h2>Развлечения</h2>
+<?xml version="1.0" encoding="UTF-8"?>
+<content>
+  <footer class="footer-bs">
+    <div class="row">
+      <div class="col-md-3 footer-brand animated fadeInLeft">
+        <h2>DeltaCinema</h2>
         <br>
-        <p>Смотрите концерты, пойте в караоке, отмечайте семейные праздники или играйте в видеоигры на большом экране</p>
         <br>
-        <button class="more-button">Подробнее</button>
+        <br>
+        <p>Кинотеатры - наша страсть, кино - наша жизнь!</p>
+        <p>© 2020-2023 Delta Cinema.</p>
       </div>
-      <img class="entertainment-image" src="img/PIEDMONT-TV-AREA-F-RGB.svg" alt="Entertainment">
-    </div>
-  </div>
-  <div class="promotion">
-    <div class="promotion-content">
-      <img class="promotion-image" src="img/db91eb2a57bf57a5a97be78b4b529108.jpg" alt="Visa Promotion">
-      <div class="promotion-text">
-        <small class="small">Акция</small>
-        <h2>Мир привилегий VISA</h2>
-        <br>
-        <p>При оплате билетов в кинотеатрах Delta Cinema платежными карточками Visa вы получаете скидку!</p>
-        <br>
-        <button class="more-button">Подробнее</button>
+
+      <div class="col-md-4 footer-nav animated fadeInUp">
+        <div class="col-md-6">
+          <ul class="pages">
+            <li><a href="#">Сейчас в кино</a></li>
+            <li><a href="#">Скоро</a></li>
+            <li><a href="#">ScreenX</a></li>
+            <li><a href="#">Звук Dolby Atmos</a></li>
+            <li><a href="#">Акции</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="list">
+            <li><a href="#">3D-очки</a></li>
+            <li><a href="#">Подарочные карты</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Возврат билетов</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-2 footer-social animated fadeInDown">
+        <h4>Соц.сети</h4>
+        <ul>
+          <li><a href="#">ВКонтакте</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 footer-ns animated fadeInRight">
+        <h4>Новостная рассылка</h4>
+        <p>Подпишитесь на нашу новостную рассылку, чтобы первыми узнавать о скидках и акциях!</p>
+        <p>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Введите email...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+            </span>
+          </div>
+        </p>
       </div>
     </div>
-  </div>
-</html>`;
+  </footer>
+</content>
+
