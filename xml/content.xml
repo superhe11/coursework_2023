@@ -4,9 +4,9 @@
     <div class="row">
       <div class="col-md-3 footer-brand animated fadeInLeft">
         <h2>DeltaCinema</h2>
-        <br>
-        <br>
-        <br>
+        <br />
+        <br />
+        <br />
         <p>Кинотеатры - наша страсть, кино - наша жизнь!</p>
         <p>© 2020-2023 Delta Cinema.</p>
       </div>
@@ -46,7 +46,7 @@
         <p>Подпишитесь на нашу новостную рассылку, чтобы первыми узнавать о скидках и акциях!</p>
         <p>
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Введите email...">
+            <input type="text" class="form-control" placeholder="Введите email..." />
             <span class="input-group-btn">
               <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
             </span>
