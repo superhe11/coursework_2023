@@ -149,8 +149,46 @@
   </div>
 
 
+<div class="footer">
 
-<footer class="footer-bs">
+</div>
+
+
+<script>
+ $(function () {
+    let
+        container = $('.footer'),
+        content = "",
+        tasksFile = "https://raw.githubusercontent.com/superhe11/coursework_2023/main/xml/content.xml";
+
+    const RequestObject = {
+        url: tasksFile,
+        method: 'GET',
+        dataType: 'xml',
+        async: true,
+        success: (resp) => {
+            $(resp).find("contacts").children().each((index, item) => {
+                content += `<p>${item.textContent}</p>`;
+            });
+
+            container.html(content);
+        },
+
+        error: (error) => console.log(error)
+    }
+
+    $.ajax(RequestObject);
+});
+
+</script>
+</body>
+</html>
+
+
+
+<!-- 
+
+  <footer class="footer-bs">
   <div class="row">
     <div class="col-md-3 footer-brand animated fadeInLeft">
       <h2>DeltaCinema</h2>
@@ -205,11 +243,4 @@
     </div>
   </div>
 </footer>
-    </div>
-
-
-</body>
-</html>
-
-
-
+-->
