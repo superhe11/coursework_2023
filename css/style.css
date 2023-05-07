@@ -5,13 +5,11 @@
       src: url('img/intro.ttf');
     }
 
-    .header {
-      font-family: 'Intro', sans-serif;
-    }
 @font-face {
       font-family: 'Verdana';
       src: url('img/Verdana.ttf');
     }
+
 body {
   overflow-x: hidden;
 	font-family: 'Verdana', sans-serif;
