@@ -1,20 +1,5 @@
 /* Убираем горизонтальный скроллбар */
 
-@font-face {
-      font-family: 'Intro';
-      src: url('img/intro.ttf');
-    }
-
-@font-face {
-      font-family: 'Verdana';
-      src: url('img/Verdana.ttf');
-    }
-
-body {
-  overflow-x: hidden;
-	font-family: 'Verdana', sans-serif;
-}
-
 a:hover {
   text-decoration: none;
 }
