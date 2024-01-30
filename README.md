@@ -1,1 +1,2 @@
-# В данном репозитории представлен курсовой проект по дисциплине КЯР на тему "Сеть кинотеатров города Минска". ФИТ БГТУ 2023
+# Coursework 
+This repository presents a course project on the topic of “Network of cinemas in the city of Minsk.” FIT BSTU 2023
